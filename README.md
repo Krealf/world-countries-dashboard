@@ -86,7 +86,7 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 - Telegram - [@krealf](https://t.me/krealf)
 
 # Todo:
-- [ ] Переключатель светлой и тёмной темы
+- [x] Переключатель светлой и тёмной темы
 - [ ] Получение списка стран и вывод в UI
 - [ ] Фильтрация стран по поиску
 - [ ] Фильтрация стран по региону
