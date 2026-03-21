@@ -10,15 +10,18 @@ import {
   selectCountriesInfo, selectVisibleCountries
 } from "../store/countries/countries-selectors";
 import {loadCountries} from "../store/countries/countries-actions";
-import {selectSearch} from "../store/controls/controls-selectors";
+import {
+  selectAllControls,
+  selectSearch
+} from "../store/controls/controls-selectors";
 
 export const HomePage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
-  const search = useSelector(selectSearch)
+  const {search, region} = useSelector(selectAllControls)
   const countries = useSelector(state => selectVisibleCountries(state, {
-    search
+    search, region
   }))
   const {status, error, qty} = useSelector(selectCountriesInfo)
 
