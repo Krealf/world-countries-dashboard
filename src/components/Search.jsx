@@ -11,7 +11,7 @@ import {selectSearch} from "../store/controls/controls-selectors";
 
 const InputContainer = styled.label`
   background-color: var(--colors-ui-base);
-  padding: 1rem 2rem;
+  padding: 18px 32px;
   display: flex;
   align-items: center;
 
@@ -22,7 +22,7 @@ const InputContainer = styled.label`
 
   @media (min-width: 767px) {
     margin-bottom: 0;
-    width: 280px;
+    max-width: 480px;
   }
 `;
 
@@ -30,11 +30,13 @@ const Input = styled.input.attrs({
   type: 'search',
   placeholder: 'Search for a country...',
 })`
-  margin-left: 2rem;
+  margin-left: 24px;
+  font-size: 14px;
   border: none;
   outline: none;
   color: var(--color-text);
   background-color: var(--colors-ui-base);
+  width: 100%;
 `;
 
 export const Search = () => {
@@ -55,7 +57,7 @@ export const Search = () => {
 
   return (
     <InputContainer>
-      <IoSearch />
+      <IoSearch size="17.5px"/>
       <Input
         onChange={handleSearch}
         value={query}

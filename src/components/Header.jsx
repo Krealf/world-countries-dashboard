@@ -24,17 +24,21 @@ const Title = styled(Link).attrs({
   to: '/',
 })`
   color: var(--colors-text);
-  font-size: var(--fs-sm);
+  font-size: 24px;
+  line-height: 137.5%;
   text-decoration: none;
   font-weight: var(--fw-bold);
 `;
 
 const ModeSwitcher = styled.div`
   color: var(--colors-text);
-  font-size: var(--fs-sm);
+  font-size: 16px;
+  line-height: 2;
   cursor: pointer;
-  // font-weight: var(--fw-bold);
+  font-weight: var(--fw-normal);
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
 `;
 
 export const Header = () => {
@@ -59,11 +63,11 @@ export const Header = () => {
           <Title onClick={cleanUp}>Where is the world?</Title>
           <ModeSwitcher onClick={toggleTheme}>
             {theme === 'light' ? (
-              <IoMoonOutline size="14px" />
+              <IoMoonOutline size="15px" />
             ) : (
-              <IoMoon size="14px" />
+              <IoMoon size="15px" />
             )}{' '}
-            <span style={{marginLeft: '0.75rem'}}>{theme} Theme</span>
+            <span style={{marginLeft: '0.75rem'}}>{theme} Mode</span>
           </ModeSwitcher>
         </Wrapper>
       </Container>

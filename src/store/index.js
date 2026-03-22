@@ -10,6 +10,7 @@ import * as api from "../config"
 const persistConfig = {
   key: 'root',
   storage,
+  whitelist: ["theme"]
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

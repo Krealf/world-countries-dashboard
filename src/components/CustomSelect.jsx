@@ -12,7 +12,7 @@ export const CustomSelect = styled(Select).attrs({
       padding: '0.25rem',
       border: 'none',
       boxShadow: 'var(--shadow)',
-      height: '50px',
+      height: '56px',
     }),
     option: (provided, state) => ({
       ...provided,
@@ -24,7 +24,8 @@ export const CustomSelect = styled(Select).attrs({
     }),
   },
 })`
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
   border-radius: var(--radii);
   font-family: var(--family);
   border: none;

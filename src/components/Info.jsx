@@ -29,8 +29,10 @@ const InfoImage = styled.img`
 `;
 
 const InfoTitle = styled.h1`
-  margin: 0;
-  font-weight: var(--fw-normal);
+  font-weight: var(--fw-bold);
+  font-size: 32px;
+  line-height: 1.38;
+  margin: 0 0 24px;
 `;
 
 const ListGroup = styled.div`
@@ -53,6 +55,7 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   line-height: 1.8;
+  font-size: 16px;
 
   & > b {
     font-weight: var(--fw-bold);
@@ -109,11 +112,10 @@ export const Info = (props) => {
   const dispatch = useDispatch()
   const neighbors = useSelector(selectNeighbors)
 
-
   useEffect(() => {
     if (borders.length)
       dispatch(loadNeighborsByBorder(borders))
-  }, [borders.length, dispatch]);
+  }, [borders, dispatch]);
 
   return (
     <Wrapper>
@@ -161,7 +163,7 @@ export const Info = (props) => {
           </List>
         </ListGroup>
         <Meta>
-          <b>Border Countries</b>
+          <b>Border Countries:</b>
           {!borders.length ? (
             <span>There is no border countries</span>
           ) : (

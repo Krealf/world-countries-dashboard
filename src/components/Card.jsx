@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.article`
   border-radius: var(--radii);
-  background-color: car(--colors-ui-base);
+  background-color: var(--colors-ui-base);
   box-shadow: var(--shadow);
   cursor: pointer;
   overflow: hidden;
@@ -23,8 +23,8 @@ const CardBody = styled.div`
 
 const CardTitle = styled.h3`
   margin: 0;
-  font-size: var(--fs-md);
   font-weight: var(--fw-bold);
+  font-size: 18px;
 `;
 
 const CardList = styled.ul`
