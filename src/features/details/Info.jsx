@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-import {useSelector, useDispatch} from "react-redux";
-import {selectNeighbors} from "../store/details/details-selectors";
-import {useEffect} from "react";
-import {loadNeighborsByBorder} from "../store/details/details-actions";
+import {useNeighbors} from "./use-neighbors";
 
 const Wrapper = styled.section`
   margin-top: 3rem;
@@ -109,17 +106,14 @@ export const Info = (props) => {
     push,
   } = props;
 
-  const dispatch = useDispatch()
-  const neighbors = useSelector(selectNeighbors)
-
-  useEffect(() => {
-    if (borders.length)
-      dispatch(loadNeighborsByBorder(borders))
-  }, [borders, dispatch]);
+  const neighbors = useNeighbors(borders);
 
   return (
     <Wrapper>
-      <InfoImage src={flag} alt={name} />
+      <InfoImage
+        src={flag}
+        alt={name}
+      />
 
       <div>
         <InfoTitle>{name}</InfoTitle>
@@ -169,7 +163,10 @@ export const Info = (props) => {
           ) : (
             <TagGroup>
               {neighbors.map((countryName) => (
-                <Tag key={countryName} onClick={() => push(`/country/${countryName}`)}>
+                <Tag
+                  key={countryName}
+                  onClick={() => push(`/world-countries-dashboard/country/${countryName}`)}
+                >
                   {countryName}
                 </Tag>
               ))}
