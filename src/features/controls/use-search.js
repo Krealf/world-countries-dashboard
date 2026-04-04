@@ -14,7 +14,7 @@ export const useSearch = () => {
 
   useEffect(() => {
     return () => debouncedSearch.cancel()
-  }, [debouncedSearch()]);
+  }, [debouncedSearch]);
 
   const handleSearch = (event) => {
     setQuery(event.target.value)
