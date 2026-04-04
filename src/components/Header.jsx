@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled(Link).attrs({
-  to: '/',
+  to: '/world-countries-dashboard/',
 })`
   color: var(--colors-text);
   font-size: 24px;
@@ -34,7 +34,9 @@ export const Header = () => {
     <HeaderEl>
       <Container>
         <Wrapper>
-          <Title onClick={() => cleanUp()}>Where is the world?</Title>
+          <h1>
+            <Title onClick={() => cleanUp()}>Where is the world?</Title>
+          </h1>
           <ThemeSwitcher />
         </Wrapper>
       </Container>

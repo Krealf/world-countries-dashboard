@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/world-countries-dashboard-using-react-redux-toolkit-and-react-router-WUQAHJMEEL)
+- Live Site URL: [GitHub Pages](https://krealf.github.io/world-countries-dashboard/)
 
 ## My process
 
@@ -41,9 +41,9 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- [React](https://reactjs.org/) - JS library
+- [React](https://reactjs.org/) - JS li[brary](https://redux-toolkit.js.org/)
 - [Axios](https://axios-http.com/) - JS library (HTTP Client)
-- [Redux](https://redux.js.org/) - JS library for state management
+- [Redux Toolkit](https://redux-toolkit.js.org/) - JS library for state management
 - [Styled components](https://styled-components.com/) - For style
 - [React Router](https://reactrouter.com/) - JS library for Routing
 

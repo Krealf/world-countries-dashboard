@@ -60,7 +60,7 @@ export const CountryList = () => {
             return (
               <Card
                 key={c.name}
-                onClick={() => navigate(`country/${c.name}`)}
+                onClick={() => navigate(`/world-countries-dashboard/country/${c.name}`)}
                 {...countryInfo}
               />
             );

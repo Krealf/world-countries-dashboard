@@ -11,7 +11,6 @@ export const useTheme = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    console.log(theme)
     dispatch(setTheme(theme === "light" ? "dark" : "light"))
   }
 

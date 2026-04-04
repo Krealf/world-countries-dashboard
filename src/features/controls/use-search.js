@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useMemo, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {selectSearch, setSearch} from "./controls-slice";
 import debounce from "lodash.debounce";
 
@@ -11,6 +11,10 @@ export const useSearch = () => {
   const debouncedSearch = useMemo(
     () => debounce((value) => dispatch(setSearch(value)), 300), [dispatch]
   )
+
+  useEffect(() => {
+    return () => debouncedSearch.cancel()
+  }, [debouncedSearch()]);
 
   const handleSearch = (event) => {
     setQuery(event.target.value)
