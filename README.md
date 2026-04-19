@@ -26,7 +26,11 @@ Users should be able to:
 - Click through to the border countries on the detail page
 - Toggle the color scheme between light and dark mode *(optional)*
 
-### Screenshot
+### Screenshots
+
+<img alt="FireShot Capture 006 - Country Flags -  krealf github io" src="https://github.com/user-attachments/assets/07ff966f-2a8b-4ce1-b2ec-9b23708c5cdb" />
+<img alt="FireShot Capture 007 - Country Flags -  krealf github io" src="https://github.com/user-attachments/assets/3d9af4e7-d01c-40dd-a969-d8d86d8d67e4" />
+<img alt="FireShot Capture 008 - Country Flags -  krealf github io" src="https://github.com/user-attachments/assets/d21f4819-2b50-49e9-a244-0f6560ce237e" />
 
 ### Links
 
