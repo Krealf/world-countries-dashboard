@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import {useNeighbors} from "./use-neighbors";
+import styled from "styled-components";
+import { useNeighbors } from "./use-neighbors";
 
 const Wrapper = styled.section`
   margin-top: 3rem;
@@ -110,10 +110,7 @@ export const Info = (props) => {
 
   return (
     <Wrapper>
-      <InfoImage
-        src={flag}
-        alt={name}
-      />
+      <InfoImage src={flag} alt={name} />
 
       <div>
         <InfoTitle>{name}</InfoTitle>
@@ -137,19 +134,19 @@ export const Info = (props) => {
           </List>
           <List>
             <ListItem>
-              <b>Top Level Domain:</b>{' '}
+              <b>Top Level Domain:</b>{" "}
               {topLevelDomain.map((d) => (
                 <span key={d}>{d}</span>
               ))}
             </ListItem>
             <ListItem>
-              <b>Currencies:</b>{' '}
+              <b>Currencies:</b>{" "}
               {currencies.map((c) => (
                 <span key={c.code}>{c.name} </span>
               ))}
             </ListItem>
             <ListItem>
-              <b>Languages:</b>{' '}
+              <b>Languages:</b>{" "}
               {languages.map((l) => (
                 <span key={l.name}>{l.name}</span>
               ))}
@@ -165,7 +162,9 @@ export const Info = (props) => {
               {neighbors.map((countryName) => (
                 <Tag
                   key={countryName}
-                  onClick={() => push(`/world-countries-dashboard/country/${countryName}`)}
+                  onClick={() =>
+                    push(`/world-countries-dashboard/country/${countryName}`)
+                  }
                 >
                   {countryName}
                 </Tag>

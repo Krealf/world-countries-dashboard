@@ -1,17 +1,17 @@
-import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   status: "idle",
   error: null,
   list: [],
-}
+};
 
 export const loadCountries = createAsyncThunk(
   "@@countries/load-countries",
-  (_, {extra: {client, api}}) => {
-    return client.get(api.ALL_COUNTRIES)
-  }
-)
+  (_, { extra: { client, api } }) => {
+    return client.get(api.ALL_COUNTRIES);
+  },
+);
 
 export const countriesSlice = createSlice({
   name: "@@countries",
@@ -30,23 +30,25 @@ export const countriesSlice = createSlice({
       .addCase(loadCountries.fulfilled, (state, action) => {
         state.status = "received";
         state.list = action.payload.data;
-      })
-  }
-})
+      });
+  },
+});
 
-export const countriesReducer = countriesSlice.reducer
+export const countriesReducer = countriesSlice.reducer;
 
 // Selectors
 export const selectCountriesInfo = (state) => ({
   status: state.countries.status,
   error: state.countries.error,
   qty: state.countries.list.length,
-})
+});
 
-export const selectAllCountries = (state) => (state.countries.list)
+export const selectAllCountries = (state) => state.countries.list;
 
-export const selectVisibleCountries = (state, {search = "", region = ""}) => {
+export const selectVisibleCountries = (state, { search = "", region = "" }) => {
   return state.countries.list.filter(
-    country => country.name.toLowerCase().includes(search.toLowerCase()) && country.region.includes(region)
-  )
-}
+    (country) =>
+      country.name.toLowerCase().includes(search.toLowerCase()) &&
+      country.region.includes(region),
+  );
+};

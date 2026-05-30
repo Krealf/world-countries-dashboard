@@ -1,14 +1,14 @@
-import {Search} from "./Search";
-import {useDispatch, useSelector} from "react-redux";
-import {selectRegion, setRegion} from "./controls-slice";
+import { Search } from "./Search";
+import { useDispatch, useSelector } from "react-redux";
+import { selectRegion, setRegion } from "./controls-slice";
 
 export const useRegion = () => {
-  const dispatch = useDispatch()
-  const region = useSelector(selectRegion)
+  const dispatch = useDispatch();
+  const region = useSelector(selectRegion);
 
   const handleSelect = (reg) => {
-    dispatch(setRegion(reg?.value || ""))
-  }
+    dispatch(setRegion(reg?.value || ""));
+  };
 
-  return [region, handleSelect]
-}
+  return [region, handleSelect];
+};

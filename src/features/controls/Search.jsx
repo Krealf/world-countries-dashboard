@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import {IoSearch} from 'react-icons/io5';
-import {useSearch} from "./use-search";
+import { IoSearch } from "react-icons/io5";
+import { useSearch } from "./use-search";
 
 const InputContainer = styled.label`
   background-color: var(--colors-ui-base);
@@ -21,8 +21,8 @@ const InputContainer = styled.label`
 `;
 
 const Input = styled.input.attrs({
-  type: 'search',
-  placeholder: 'Search for a country...',
+  type: "search",
+  placeholder: "Search for a country...",
 })`
   margin-left: 24px;
   font-size: 14px;
@@ -34,15 +34,12 @@ const Input = styled.input.attrs({
 `;
 
 export const Search = () => {
-  const [query, handleSearch] = useSearch()
+  const [query, handleSearch] = useSearch();
 
   return (
     <InputContainer>
-      <IoSearch size="17.5px"/>
-      <Input
-        onChange={handleSearch}
-        value={query}
-      />
+      <IoSearch size="17.5px" />
+      <Input onChange={handleSearch} value={query} />
     </InputContainer>
   );
 };

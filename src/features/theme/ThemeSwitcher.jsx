@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {IoMoon, IoMoonOutline} from 'react-icons/io5';
-import {useTheme} from "./use-theme";
+import { IoMoon, IoMoonOutline } from "react-icons/io5";
+import { useTheme } from "./use-theme";
 
 const ModeSwitcher = styled.div`
   color: var(--colors-text);
@@ -16,12 +16,14 @@ const ModeSwitcher = styled.div`
 export const ThemeSwitcher = () => {
   const [theme, toggleTheme] = useTheme();
 
-  return (<ModeSwitcher onClick={toggleTheme}>
-    {theme === 'light' ? (
-      <IoMoonOutline size="15px" />
-    ) : (
-      <IoMoon size="15px" />
-    )}{' '}
-    <span style={{marginLeft: '0.75rem'}}>{theme} Mode</span>
-  </ModeSwitcher>)
-}
+  return (
+    <ModeSwitcher onClick={toggleTheme}>
+      {theme === "light" ? (
+        <IoMoonOutline size="15px" />
+      ) : (
+        <IoMoon size="15px" />
+      )}{" "}
+      <span style={{ marginLeft: "0.75rem" }}>{theme} Mode</span>
+    </ModeSwitcher>
+  );
+};
